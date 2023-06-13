@@ -1,6 +1,9 @@
 // DEPENDENCIES
 import inquirer from "inquirer";
-const Shape = require('./lib/Shape')
+const Shape = require('./lib/Shape');
+const Circle = require('./lib/Circle');
+const Square = require('./lib/Square');
+const Triangle = require('./lib/Triangle');
 
 // DATA
 const questions = [
@@ -29,7 +32,7 @@ const questions = [
 
 // FUNCTIONS
 
-function chooseLogo(answers) {
+function chooseLogo(data) {
 
 }
 
