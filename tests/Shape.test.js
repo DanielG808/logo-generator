@@ -13,4 +13,16 @@ describe("Shape", () => {
         expect(color).toBeDefined();
         expect(typeof color).toEqual("string");
     })
+    it('should have a callback function called setShapeColor', () => {
+        const shape = new Shape();
+        
+        expect(shape).toHaveProperty("setShapeColor");
+        expect(typeof shape.setShapeColor).toBe("function");
+    })
+    it('should have a color property', () => {
+        const shape = new Shape();
+        const color = shape.setShapeColor("blue");
+        
+        expect(color).toEqual("blue");
+    })
 })

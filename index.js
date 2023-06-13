@@ -9,7 +9,7 @@ const questions = [
         type: 'input'
     },
     {
-        name: 'text-color',
+        name: 'textColor',
         message: 'Choose a color for your text (OR choose a hexidecimal code):',
         type: 'input'
     },
@@ -18,6 +18,11 @@ const questions = [
         message: 'Choose what shape you want to appear on your logo:',
         type: 'list',
         choices: ['square', 'triangle', 'circle']
+    },
+    {
+        name: 'shapeColor',
+        message: 'Choose a color for your shape (OR choose a hexidecimal code):',
+        type: 'input'
     }
 ]
 
