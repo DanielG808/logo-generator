@@ -28,6 +28,16 @@ const questions = [
 
 // FUNCTIONS
 
+function handleAnswers(answers) {
+    if (answers.text.length < 3) {
+        console.log("Logo text must be a minimum of 3 characters");
+        init();
+    }
+    else {
+        // write the file
+    }
+}
+
 function init() {
     inquirer
     .prompt(questions)
