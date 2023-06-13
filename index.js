@@ -1,5 +1,6 @@
 // DEPENDENCIES
 import inquirer from "inquirer";
+const Shape = require('./lib/Shape')
 
 // DATA
 const questions = [
@@ -28,6 +29,10 @@ const questions = [
 
 // FUNCTIONS
 
+function chooseLogo(answers) {
+
+}
+
 function handleAnswers(answers) {
     if (answers.text.length < 3) {
         console.log("Logo text must be a minimum of 3 characters");
@@ -35,6 +40,7 @@ function handleAnswers(answers) {
     }
     else {
         // write the file
+        writeFile('logo.svg', chooseLogo(answers))
     }
 }
 
