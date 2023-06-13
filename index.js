@@ -1,9 +1,12 @@
 // DEPENDENCIES
-import inquirer from "inquirer";
+const inquirer = require('inquirer')
+const fs = require('fs');
+
 const Shape = require('./lib/Shape');
 const Circle = require('./lib/Circle');
 const Square = require('./lib/Square');
 const Triangle = require('./lib/Triangle');
+
 
 // DATA
 const questions = [
@@ -33,12 +36,32 @@ const questions = [
 // FUNCTIONS
 
 function chooseLogo(data) {
+    const { text, textColor, shapeColor } = data;
 
+    if (data.shape === 'circle') {
+        const circle = new Circle(text, textColor, shapeColor);
+        return circle.render();
+    }
+    else if (data.shape === 'square') {
+        const square = new Square(text, textColor, shapeColor);
+        return square.render();
+    }
+    else {
+        const triangle = new Triangle(text, textColor, shapeColor);
+        return triangle.render();
+    }
+}
+
+function writeFile(filename, data) {
+  fs.writeFile(filename, data, (error) => {
+    if (error) throw error;
+    console.log('logo.svg has been created!')
+  })
 }
 
 function handleAnswers(answers) {
-    if (answers.text.length < 3) {
-        console.log("Logo text must be a minimum of 3 characters");
+    if (answers.text.length > 3) {
+        console.log("Logo text must be a max of 3 characters");
         init();
     }
     else {

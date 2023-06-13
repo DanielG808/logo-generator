@@ -1,0 +1,4 @@
+<svg height="300" width="200">
+        <rect width="160" height="160" fill="darkred"/>
+        <text x="28" y="90" font-size="4em" fill="white">SPS</text>
+     </svg>
