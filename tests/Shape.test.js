@@ -6,4 +6,11 @@ describe("Shape", () => {
 
         expect(shape instanceof Shape).toBe(true);
     })
+    it('should have a color property that is a string data type', () => {
+        const shape = new Shape("blue");
+        const color = shape.color
+        
+        expect(color).toBeDefined();
+        expect(typeof color).toEqual("string");
+    })
 })
