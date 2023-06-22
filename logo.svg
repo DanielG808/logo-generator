@@ -1,4 +1,4 @@
 <svg height="300" width="200">
-        <circle cx="100" cy="100" r="80" fill="darkred"/>
-        <text x="48" y="115" font-size ="4em" fill="white">SPS</text>
-    </svg>
+        <polygon points="50 15, 100 100, 0 100" fill="blue"/>
+        <text x="30" y="75" font-size="1.5em" fill="white">GAY</text>
+      </svg>
